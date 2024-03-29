@@ -3,6 +3,10 @@
         "lib/**/*.jar",
         "/Library/Java/jar-files/mysql-connector-j-8.3.0.jar",
         "/Library/Java/jar-files/json-20240303.jar",
-        "c:\\Users\\adrim\\OneDrive\\HWR Duales Studium\\Semester 4\\Client Server\\Projekte\\DepotProjektKopie\\json-20240303.jar"
+        "c:\\Users\\adrim\\OneDrive\\HWR Duales Studium\\Semester 4\\Client Server\\Projekte\\DepotProjektKopie\\json-20240303.jar",
+        "hibernate-core-5.3.36.Final.jar",
+        "json-20240303.jar",
+        "jta-1.1.jar",
+        "javax.persistence-api-2.2.jar"
     ]
 }

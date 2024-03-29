@@ -1,12 +1,30 @@
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+import javax.persistence.OneToMany;
+import javax.persistence.CascadeType;
+import javax.persistence.*; // Add this line to import the javax.persistence package
+import javax.persistence.Column; // Add this line to import the Column class
 
+@Entity
+@Table(name = "nutzer")
 public class Nutzer {
+    @Id
+    @Column(name = "username", nullable = false)
     private String username;
+
+    @Column(name = "password", nullable = false)
     private String password;
-    private Map<Aktie, Integer> depot;
+
+    @Transient
+    private Map<Aktie, Integer> depot = new HashMap<>();
+
+    // Angenommen, dass 'Konto' auch eine Entität ist:
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "nutzer")
     private Konto konto;
 
     // Constructor
